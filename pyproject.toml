@@ -1,0 +1,25 @@
+[project]
+name = "api-idempotency"
+version = "0.1.0"
+description = "SQLite-backed Idempotency-Key middleware for FastAPI"
+readme = "README.md"
+authors = [
+    { name = "Frozenjaws", email = "mrfrozen23@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "anyio>=4.15.1",
+    "exceptiongroup>=1.0; python_version < '3.11'",
+    "fastapi>=0.162.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "uvicorn>=0.54.0",
+]
